@@ -1,15 +1,23 @@
-// const styles = {
-//     image: '',
-// }
+import { useContext, useEffect, useState } from 'react'
+import GoogleFontLoader from 'react-google-font-loader'
+import { ScrollContext } from '../contexts/ScrollContext'
 
 export const Intro = () => {
-  return (
-    <div className="flex w-full flex-col">
-        <h1 className="text-5xl">Juan Jose</h1>
-        <h1>Cardona Bolivar</h1>
-        <p>Introduction</p>
-        <img className='max-w-lg' src="https://img.freepik.com/foto-gratis/cierre-dientes-hombre-moreno-sonriendo_1187-5800.jpg?w=826&t=st=1725737542~exp=1725738142~hmac=9f8d8d2a9f7d309391e0c283de20d0e5b50561547634814af3ed9fae3f8c468c" alt="" />
-    </div>
+    const {scrollValue} = useContext(ScrollContext)
+    const [opacity, setOpacity] = useState(0)
 
-  )
+    useEffect(() => {
+        setOpacity(Number((scrollValue / 100).toFixed(1)))
+    }, [scrollValue])
+
+    return (
+        <div style={{ marginRight: `${scrollValue}px` }} className="flex w-full flex-col items-start sm:items-center">
+            <GoogleFontLoader fonts={[{ font: 'Shrikhand', weights: [400, 700] }, {font: 'Jersey 15', weights: [400]}]} />
+
+            <h1 style={{ fontFamily: 'Shrikhand, sans-serif', marginRight: `${scrollValue}px`, marginTop: 100 }} className="text-[40px] sm:text-[60px] text-violet-800">Hi I'm</h1>
+            <h1 style={{ fontFamily: 'Shrikhand, sans-serif', marginRight: `${scrollValue / 2}px` }} className="text-[60px] mt-[-40px] sm:text-[100px] md:text-[100px]">Juan Jose</h1>
+            <h1 style={{ fontFamily: 'Shrikhand, sans-serif', marginRight: `${scrollValue / 2}px` }} className="text-[60px] mt-[-50px] sm:text-[100px] md:text-[100px] tracking-wider">Cardona</h1>
+            <p style={{ fontFamily: 'Jersey 15, sans-seif', opacity: opacity }}>Full Stack Software Developer</p>
+        </div>
+    )
 }
