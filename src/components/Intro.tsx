@@ -4,9 +4,12 @@ import { ScrollContext } from '../contexts/ScrollContext'
 import { useScreenWidth } from '../hooks/useScreenWidth'
 
 export const Intro = () => {
+    // Get the scrollValue and opacity from the ScrollContext to animate the text
     const { scrollValue, opacity } = useContext(ScrollContext)
+    // Get the width of the screen to clamp the scrollValue
     const { width } = useScreenWidth()
 
+    // Clamp the scrollValue to a maximum of half the width of the screen
     const clampedScrollValue = Math.min(Math.max(scrollValue, 0), width / 2)
 
     return (
