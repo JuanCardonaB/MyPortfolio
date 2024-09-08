@@ -1,4 +1,5 @@
-import { Button, Link, Navbar, NavbarBrand, NavbarContent, NavbarItem } from "@nextui-org/react"
+import { Link, Navbar, NavbarBrand, NavbarContent, NavbarItem } from "@nextui-org/react"
+import { ThemeSwitcher } from "./ThemeSwitcher"
 
 export const NavBar = () => {
   return (
@@ -24,13 +25,8 @@ export const NavBar = () => {
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
-        </NavbarItem>
         <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
-            Sign Up
-          </Button>
+          <ThemeSwitcher />
         </NavbarItem>
       </NavbarContent>
     </Navbar>

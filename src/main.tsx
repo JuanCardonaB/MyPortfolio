@@ -6,6 +6,7 @@ import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
 import { Home } from './screens/Home.tsx'
 import { NavBar } from './components/NavBar.tsx'
 import { ScrollProvider } from './contexts/ScrollContext.tsx'
+import { ThemeProvider } from 'next-themes'
 
 const router = createBrowserRouter([
   {
@@ -20,11 +21,13 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <ScrollProvider>
-      <NextUIProvider>
-        <NavBar />
-        <RouterProvider router={router} />
-      </NextUIProvider>
-    </ScrollProvider>
+    <ThemeProvider attribute="class" defaultTheme="dark">
+      <ScrollProvider>
+        <NextUIProvider>
+            <NavBar />
+            <RouterProvider router={router} />
+        </NextUIProvider>
+      </ScrollProvider>
+    </ThemeProvider>
   </StrictMode>
 )
