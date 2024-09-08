@@ -2,3 +2,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* index.css */
+:root {
+    --background-color-light: #ffffff;
+    --background-color-dark: #000000;
+    --text-color-light: #000000;
+    --text-color-dark: #ffffff;
+  }
+  
+  .light {
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+  }
+  
+  .dark {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+  }
+  
