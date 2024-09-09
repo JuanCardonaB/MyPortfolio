@@ -28,7 +28,7 @@ module.exports = {
             borderRadius: "8px",
           },
           colors: {
-            primary: "#0070F3",
+            primary: "#5b21b6",
             secondary: "#7928CA",
             success: "#17C964",
             warning: "#F5A623",
@@ -43,7 +43,7 @@ module.exports = {
             borderRadius: "8px",
           },
           colors: {
-            primary: "#0070F3",
+            primary: "#5b21b6",
             secondary: "#7928CA",
             success: "#17C964",
             warning: "#F5A623",
