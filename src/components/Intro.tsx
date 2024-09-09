@@ -2,8 +2,10 @@ import { useContext } from 'react'
 import GoogleFontLoader from 'react-google-font-loader'
 import { ScrollContext } from '../contexts/ScrollContext'
 import { useScreenWidth } from '../hooks/useScreenWidth'
+import { useTranslation } from 'react-i18next'
 
 export const Intro = () => {
+    const { t } = useTranslation('global')
     // Get the scrollValue and opacity from the ScrollContext to animate the text
     const { scrollValue, opacity } = useContext(ScrollContext)
     // Get the width of the screen to clamp the scrollValue
@@ -17,16 +19,16 @@ export const Intro = () => {
             <GoogleFontLoader fonts={[{ font: 'Shrikhand', weights: [400, 700] }, { font: 'Jersey 15', weights: [400] }]} />
 
             <h1 style={{ fontFamily: 'Shrikhand, sans-serif', marginRight: width > 768 ? `${clampedScrollValue}px` : ''}} className="mt-6 text-[40px] sm:text-[60px] sm:mt-32 text-violet-800">
-                Hi I'm
+                {t('Intro.Hello')}
             </h1>
             <h1 style={{ fontFamily: 'Shrikhand, sans-serif', marginRight: `${-clampedScrollValue / 2}px` }} className="text-[60px] mt-[-20px] sm:mt-[-40px] sm:text-[100px]">
-                Juan Jose
+                {t('Intro.Name')}
             </h1>
             <h1 style={{ fontFamily: 'Shrikhand, sans-serif', marginRight: `${clampedScrollValue / 2}px` }} className="text-[60px] mt-[-30px] sm:mt-[-50px] sm:text-[100px] tracking-wider">
-                Cardona
+                {t('Intro.LastName')}
             </h1>
             <p style={{ fontFamily: 'Jersey 15, sans-seif', opacity: opacity }}>
-                Full Stack Software Developer
+                {t('Intro.Rol')}
             </p>
 
             <div style={{ opacity: opacity, marginLeft: `${clampedScrollValue / 2}px` }} className="flex gap-3 mt-8">   

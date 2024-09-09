@@ -1,0 +1,21 @@
+{
+    "Navbar": {
+        "Home": "Home",
+        "About": "About",
+        "Experience": "Experience",
+        "Projects": "Projects",
+        "Contact": "Contact"
+    },
+    "Intro": {
+        "Hello": "Hi, I'm",
+        "Name": "Juan Jose",
+        "LastName": "Cardona",
+        "Rol": "Full Stack Software Developer"
+    },
+    "AboutMe": {
+        "Nature": "I ❤️ Nature, and take walks to relaxing myself.",
+        "Cook": "Cooking make feel that I have the control👨🏻‍🍳.",
+        "Gym": "Gym💪🏼.",
+        "Friends": "Having friend has made me learn a lot🧍🏻‍♂️🧍🏻‍♂️🧍🏻‍♂️🧍🏻‍♂️."
+    }
+}
