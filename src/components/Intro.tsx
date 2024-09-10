@@ -18,7 +18,7 @@ export const Intro = () => {
         <div style={{ marginRight: `${clampedScrollValue}px` }} className="flex w-full flex-col items-start sm:items-center">
             <GoogleFontLoader fonts={[{ font: 'Shrikhand', weights: [400, 700] }, { font: 'Jersey 15', weights: [400] }]} />
 
-            <h1 style={{ fontFamily: 'Shrikhand, sans-serif', marginRight: width > 768 ? `${clampedScrollValue}px` : ''}} className="mt-6 text-[40px] sm:text-[60px] sm:mt-32 text-violet-800">
+            <h1 style={{ fontFamily: 'Shrikhand, sans-serif', marginRight: width > 768 ? `${clampedScrollValue}px` : ''}} className="mt-8 text-[40px] sm:text-[60px] sm:mt-64 text-violet-800">
                 {t('Intro.Hello')}
             </h1>
             <h1 style={{ fontFamily: 'Shrikhand, sans-serif', marginRight: `${-clampedScrollValue / 2}px` }} className="text-[60px] mt-[-20px] sm:mt-[-40px] sm:text-[100px]">
