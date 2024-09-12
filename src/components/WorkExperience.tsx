@@ -1,15 +1,19 @@
 import GoogleFontLoader from "react-google-font-loader"
 import { WorkExperienceCard } from "./WorkExperienceCard"
+import { useTranslation } from "react-i18next"
 
 export const WorkExperience = () => {
+  const {t} = useTranslation('global')
+  const currentLanguage = localStorage.getItem('lang') || 'en'
+
   return (
     <div className="flex flex-col justify-center items-center mt-[280px] w-full">
       <GoogleFontLoader fonts={[{ font: 'Shrikhand', weights: [400, 700] }]} />
 
       <div className="max-w-[1024px] w-full">
-        <div className="flex justify-center items-center gap-3">
-          <h2 className="text-[50px]" style={{ fontFamily: 'Shrikhand, sans-serif' }} >Work</h2>
-          <h2 className="text-[50px] text-violet-800" style={{ fontFamily: 'Shrikhand, sans-serif' }}>Experience 💼</h2>
+        <div className="flex flex-col md:flex-row justify-center items-center md:gap-3">
+          <h2 className="text-[40px] sm:text-[50px] mb-[-20px] md:mb-0" style={{ fontFamily: 'Shrikhand, sans-serif' }} >{currentLanguage === 'en' ? t('WorkExperience.Work') : t('WorkExperience.Experience')}</h2>
+          <h2 className="text-[45px] sm:text-[50px] text-violet-800" style={{ fontFamily: 'Shrikhand, sans-serif' }}>{currentLanguage === 'en' ? t('WorkExperience.Experience') : t('WorkExperience.Work')} 💼</h2>
         </div>
         <div className="flex justify-center w-full mt-10 gap-10">
           <div className="h-[650px] w-1 bg-violet-800 rounded-lg">
