@@ -1,5 +1,6 @@
 import { AboutMe } from "../components/AboutMe"
 import { Intro } from "../components/Intro"
+import { Projects } from "../components/Projects"
 import { WorkExperience } from "../components/WorkExperience"
 
 export const Home = () => {
@@ -9,6 +10,7 @@ export const Home = () => {
         <Intro />
         <WorkExperience />
         <AboutMe />
+        <Projects />
       </div>
     </div>
   )
