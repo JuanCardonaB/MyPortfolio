@@ -12,7 +12,7 @@ module.exports = {
         'custom-sm': '715px',
         'custom-md': '875px',
         'custom-lg': '1200px',
-
+        'custom-1050': '1050px',
       }
     },
   },

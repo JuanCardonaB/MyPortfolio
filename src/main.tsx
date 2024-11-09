@@ -4,7 +4,6 @@ import { NextUIProvider } from '@nextui-org/react'
 import { StrictMode } from 'react'
 import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
 import { Home } from './screens/Home.tsx'
-import { NavBar } from './components/NavBar.tsx'
 import { ScrollProvider } from './contexts/ScrollContext.tsx'
 import { ThemeProvider } from 'next-themes'
 import { I18nextProvider } from 'react-i18next'
@@ -45,7 +44,6 @@ createRoot(document.getElementById('root')!).render(
       <ThemeProvider attribute="class" defaultTheme="dark">
         <ScrollProvider>
           <NextUIProvider>
-            <NavBar />
             <RouterProvider router={router} />
           </NextUIProvider>
         </ScrollProvider>

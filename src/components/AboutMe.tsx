@@ -8,7 +8,7 @@ import GoogleFontLoader from 'react-google-font-loader'
 export const AboutMe = () => {
     const { t } = useTranslation('global')
     return (
-        <div className='flex flex-col justify-center items-center mt-[100px] transition-all duration-500' style={{ gap: '1rem' }}>
+        <div className='flex flex-col justify-center items-center mt-[150px] transition-all duration-500' style={{ gap: '1rem' }}>
             <GoogleFontLoader fonts={[{ font: 'Shrikhand', weights: [400, 700] }]} />
 
             <div className='flex gap-3'>
@@ -97,7 +97,6 @@ export const AboutMe = () => {
                     <p className='text-[#000] w-[230px]'>{t('AboutMe.Friends')}</p>
                 </div>
             </div>
-            <button className='border-2 mt-[30px] border-[#5b21b6] rounded-md w-28 h-8 hover:bg-[#5b21b6] transition duration-400'>See More</button>
         </div>
     )
 }
