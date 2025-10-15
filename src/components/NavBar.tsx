@@ -1,7 +1,11 @@
-import { Link, Navbar, NavbarBrand, NavbarContent, NavbarItem } from "@nextui-org/react"
-import { ThemeSwitcher } from "./ThemeSwitcher"
-import { useTranslation } from 'react-i18next'
-import { LanguageSwitcher } from "./LanguageSwitcher"
+import {
+  Link,
+  Navbar,
+  NavbarContent,
+  NavbarItem,
+  Switch,
+} from "@nextui-org/react";
+import { useTranslation } from "react-i18next";
 
 interface NavBarProps {
   aboutRef: React.RefObject<HTMLDivElement>;
@@ -10,45 +14,64 @@ interface NavBarProps {
   intro: React.RefObject<HTMLDivElement>;
 }
 
-export const NavBar = ({ intro, aboutRef, experienceRef, projectsRef }: NavBarProps) => {
-  const { t } = useTranslation('global')
+export const NavBar = ({
+  aboutRef,
+  experienceRef,
+  projectsRef,
+}: NavBarProps) => {
+  const { t } = useTranslation("global");
 
   const scrollTo = (ref: React.RefObject<HTMLDivElement>) => {
-    ref.current?.scrollIntoView({ behavior: 'smooth' })
-  }
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
-    <Navbar shouldHideOnScroll>
-      <NavbarBrand className="cursor-pointer" onClick={() => scrollTo(intro)}>
-        {t('Navbar.Home')}
-      </NavbarBrand>
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
-      <NavbarItem>
-          <Link className="cursor-pointer" color="foreground" onClick={() => scrollTo(aboutRef)}>
-            {t('Navbar.About')}
+    <Navbar
+      className={"bg-[#212835]/60 backdrop-blur-3xl pointer-events-none"}
+      shouldHideOnScroll
+    >
+      <NavbarContent className="pointer-events-auto" justify="start">
+        <p className="cursor-pointer font-semibold text-[#828b9c]`">
+          {t("Navbar.Portfolio")}
+        </p>
+      </NavbarContent>
+
+      <NavbarContent
+        className="flex gap-4 pointer-events-auto"
+        justify="center"
+      >
+        <NavbarItem>
+          <Link
+            className={`cursor-pointer font-semibold text-[#828b9c]`}
+            onPress={() => scrollTo(aboutRef)}
+          >
+            {t("Navbar.About")}
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
-          <Link className="cursor-pointer" onClick={() => scrollTo(experienceRef)} aria-current="page">
-            {t('Navbar.Experience')}
+          <Link
+            className={`cursor-pointer font-semibold text-[#828b9c]`}
+            onPress={() => scrollTo(experienceRef)}
+            aria-current="page"
+          >
+            {t("Navbar.Experience")}
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className="cursor-pointer" color="foreground" onClick={() => scrollTo(projectsRef)}>
-            {t('Navbar.Projects')}
+          <Link
+            className={`cursor-pointer font-bold text-[#828b9c]`}
+            onPress={() => scrollTo(projectsRef)}
+          >
+            {t("Navbar.Projects")}
           </Link>
         </NavbarItem>
       </NavbarContent>
-      <NavbarContent justify="end">
+
+      <NavbarContent className="pointer-events-auto" justify="end">
         <NavbarItem>
-          <ThemeSwitcher />
-        </NavbarItem>
-        <NavbarItem className="flex justify-center items-center gap-2">
-          <p>🇨🇴</p>
-          <LanguageSwitcher />
-          <p>🇺🇸</p>
+          <Switch color="secondary" />
         </NavbarItem>
       </NavbarContent>
     </Navbar>
-  )
-}
+  );
+};

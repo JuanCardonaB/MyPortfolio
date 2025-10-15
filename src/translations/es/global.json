@@ -13,7 +13,8 @@
         "Rol": "Desarrollador de Software Full Stack"
     },
     "AboutMe": {
-        "title": "Sobre mi",
+        "titleAbout": "Sobre",
+        "titleMe": "mi",
         "Nature": "Me encanta la naturaleza, y dar paseos para relajarme❤️.",
         "Cook": "Cocinar me hace sentir que tengo el control de todo👨🏻‍🍳.",
         "Gym": "Gym💪🏼.",
@@ -22,5 +23,8 @@
     "WorkExperience": {
         "Work": "Trabajo",
         "Experience": "Experiencia de"
+    },
+    "Projects": {
+        "titleProjects": "Proyectos"
     }
 }

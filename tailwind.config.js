@@ -4,28 +4,33 @@ module.exports = {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       screens: {
-        'custom-sm': '715px',
-        'custom-md': '875px',
-        'custom-lg': '1200px',
-        'custom-1050': '1050px',
-      }
+        "custom-sm": "715px",
+        "custom-md": "875px",
+        "custom-lg": "1200px",
+        "custom-1050": "1050px",
+      },
+    },
+    fontFamily: {
+      sans: ["ui-sans-serif", "system-ui"],
+      serif: ["ui-serif", "Georgia"],
+      mono: ["ui-monospace", "SFMono-Regular"],
     },
   },
-  darkMode: 'class', // o 'media' o 'class'
+  darkMode: "class", // o 'media' o 'class'
   plugins: [
     nextui({
-      prefix: "nextui", 
+      prefix: "nextui",
       addCommonColors: true,
       defaultTheme: "dark",
       defaultExtendTheme: "dark",
       layout: {
         spacingUnit: "1rem",
-        borderRadius: "8px", 
+        borderRadius: "8px",
         containerMaxWidth: "1280px",
       },
       themes: {

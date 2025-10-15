@@ -1,6 +1,6 @@
 {
     "Navbar": {
-        "Home": "Home",
+        "Portfolio": "Portfolio",
         "About": "About Me",
         "Experience": "Experience",
         "Projects": "Projects",
@@ -16,12 +16,15 @@
         "titleAbout": "About",
         "titleMe": "Me",
         "Nature": "I ❤️ Nature, and take walks to relaxing myself.",
-        "Cook": "Cooking make feel that I have the control👨🏻‍🍳.",
+        "Cook": "Cooking makes me feel that I have the control👨🏻‍🍳.",
         "Gym": "Gym💪🏼.",
         "Friends": "Having friend has made me learn a lot🧍🏻‍♂️🧍🏻‍♂️🧍🏻‍♂️🧍🏻‍♂️."
     },
     "WorkExperience": {
         "Work": "Work",
         "Experience": "Experience"
+    },
+    "Projects": {
+        "titleProjects": "Projects"
     }
 }
