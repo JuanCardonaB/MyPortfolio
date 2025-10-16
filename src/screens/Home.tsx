@@ -1,22 +1,23 @@
 import { useRef } from "react";
 import { NavBar } from "../components/NavBar";
+import { Welcome } from "../components/Welcome";
 
 export const Home = () => {
-  const introRef = useRef<HTMLDivElement>(null);
   const aboutMeRef = useRef<HTMLDivElement>(null);
   const workExperienceRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
+  const welcomeRef = useRef<HTMLDivElement>(null);
   return (
-    <div className="flex flex-col h-[4000px] bg-[#0E1522]">
+    <div className="flex flex-col bg-[#000]">
       <NavBar
-        intro={introRef}
         aboutRef={aboutMeRef}
+        welcomeRef={welcomeRef}
         experienceRef={workExperienceRef}
         projectsRef={projectsRef}
       />
-      <div className="w-full flex flex-col px-6">
-        <div ref={introRef} id="intro">
-          {/* <Intro /> */}
+      <div className="w-full flex flex-col">
+        <div ref={welcomeRef} id="intro">
+          <Welcome />
         </div>
         <div ref={workExperienceRef} id="workExperience">
           {/* <WorkExperience /> */}
