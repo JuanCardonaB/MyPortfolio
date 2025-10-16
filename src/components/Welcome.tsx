@@ -5,7 +5,6 @@ export const Welcome = () => {
   const { t } = useTranslation("global");
   return (
     <section className="relative flex justify-center items-center flex-col h-[calc(100vh-40px)] overflow-hidden">
-      {/* Líneas curvas animadas en el fondo */}
       <div className="absolute inset-0 pointer-events-none">
         <svg className="absolute w-full h-full opacity-20">
           <path
@@ -49,7 +48,6 @@ export const Welcome = () => {
         </svg>
       </div>
 
-      {/* Contenido principal */}
       <div className="flex justify-center items-center flex-col mt-[-60px] relative z-10 px-4">
         <div className="flex justify-center items-center flex-col text-center">
           <h1 className="font-bold text-[32px] sm:text-[48px] lg:text-[60px] bg-gradient-to-r from-white via-purple-500 to-white bg-[length:200%_100%] bg-clip-text text-transparent opacity-0 animate-[fadeIn_0.6s_ease-in_forwards,gradient_3s_linear_infinite]">
