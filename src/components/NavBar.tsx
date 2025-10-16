@@ -76,14 +76,6 @@ export const NavBar = ({
         <NavbarItem>
           <Link
             className={`cursor-pointer font-semibold text-[#828b9c]`}
-            onPress={() => scrollTo(aboutRef)}
-          >
-            {t("Navbar.About")}
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link
-            className={`cursor-pointer font-semibold text-[#828b9c]`}
             onPress={() => scrollTo(experienceRef)}
           >
             {t("Navbar.Experience")}
@@ -95,6 +87,14 @@ export const NavBar = ({
             onPress={() => scrollTo(projectsRef)}
           >
             {t("Navbar.Projects")}
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link
+            className={`cursor-pointer font-semibold text-[#828b9c]`}
+            onPress={() => scrollTo(aboutRef)}
+          >
+            {t("Navbar.About")}
           </Link>
         </NavbarItem>
       </NavbarContent>

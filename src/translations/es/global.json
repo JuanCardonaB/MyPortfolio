@@ -13,12 +13,13 @@
         "Rol": "Desarrollador de Software Full Stack"
     },
     "AboutMe": {
-        "titleAbout": "Sobre",
-        "titleMe": "mi",
-        "Nature": "Me encanta la naturaleza, y dar paseos para relajarme❤️.",
-        "Cook": "Cocinar me hace sentir que tengo el control de todo👨🏻‍🍳.",
-        "Gym": "Gym💪🏼.",
-        "Friends": "Tener amigos me ha hecho aprender mucho🧍🏻‍♂️🧍🏻‍♂️🧍🏻‍♂️🧍🏻‍♂️."
+        "title": "Acerca de mí",
+        "description": "Soy un desarrollador apasionado por crear soluciones tecnológicas que impacten positivamente en la vida de las personas. Con más de 5 años de experiencia, me especializo en desarrollo full-stack, arquitecturas escalables y tecnologías emergentes como blockchain e IA.",
+        "philosophy": "Mi filosofía es simple: \"La tecnología debe ser invisible, la experiencia inolvidable\". Cada línea de código que escribo está pensada para resolver problemas reales y crear experiencias excepcionales.",
+        "downloadCV": "Descargar CV",
+        "quote": "\"El futuro pertenece a quienes creen en la belleza de sus sueños\" - Eleanor Roosevelt",
+        "signature": "— Desarrollador & Creador Tech",
+        "footer": "© 2024 Portafolio. Diseñado y desarrollado con ❤️ y mucho café."
     },
     "WorkExperience": {
         "Work": "Trabajo",

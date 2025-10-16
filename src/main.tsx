@@ -32,12 +32,12 @@ i18n.init({
 
 const router = createBrowserRouter([
   {
-    path: "/home",
+    path: "/",
     element: <Home />,
   },
   {
     path: "/*",
-    element: <Navigate to="/home" />,
+    element: <Navigate to="/" />,
   },
 ]);
 
