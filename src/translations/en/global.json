@@ -13,12 +13,13 @@
         "Rol": "Full Stack Software Developer"
     },
     "AboutMe": {
-        "titleAbout": "About",
-        "titleMe": "Me",
-        "Nature": "I ❤️ Nature, and take walks to relaxing myself.",
-        "Cook": "Cooking makes me feel that I have the control👨🏻‍🍳.",
-        "Gym": "Gym💪🏼.",
-        "Friends": "Having friend has made me learn a lot🧍🏻‍♂️🧍🏻‍♂️🧍🏻‍♂️🧍🏻‍♂️."
+        "title": "About Me",
+        "description": "I'm a passionate developer focused on creating technological solutions that positively impact people's lives. With over 5 years of experience, I specialize in full-stack development, scalable architectures, and emerging technologies like blockchain and AI.",
+        "philosophy": "My philosophy is simple: \"Technology should be invisible, experience unforgettable\". Every line of code I write is designed to solve real problems and create exceptional experiences.",
+        "downloadCV": "Download CV",
+        "quote": "\"The future belongs to those who believe in the beauty of their dreams\" - Eleanor Roosevelt",
+        "signature": "— Developer & Tech Creator",
+        "footer": "© 2024 Portfolio. Designed and developed with ❤️ and lots of coffee."
     },
     "WorkExperience": {
         "Work": "Work",

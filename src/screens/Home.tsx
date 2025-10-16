@@ -3,6 +3,7 @@ import { NavBar } from "../components/NavBar";
 import { Welcome } from "../components/Welcome";
 import { WorkExperience } from "../components/WorkExperience";
 import { Projects } from "../components/Projects";
+import { AboutMe } from "../components/AboutMe";
 
 export const Home = () => {
   const aboutMeRef = useRef<HTMLDivElement>(null);
@@ -28,7 +29,7 @@ export const Home = () => {
           <Projects />
         </div>
         <div ref={aboutMeRef} id="aboutMe">
-          {/* <AboutMe /> */}
+          <AboutMe />
         </div>
       </div>
     </div>
