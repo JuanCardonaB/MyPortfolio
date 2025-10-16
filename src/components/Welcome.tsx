@@ -57,7 +57,7 @@ export const Welcome = () => {
             {t("Welcome.DataAnalyst")}
           </h1>
         </div>
-        <h3 className="font-semibold text-white text-[16px] sm:text-[18px] lg:text-[20px] mt-2 sm:mt-2s opacity-0 animate-[fadeIn_0.6s_ease-in_0.6s_forwards]">
+        <h3 className="font-semibold text-white text-[16px] sm:text-[18px] lg:text-[20px] mt-2 sm:mt-2 opacity-0 animate-[fadeIn_0.6s_ease-in_0.6s_forwards]">
           {t("Welcome.JuanJoseCardonaBolivar")}
         </h3>
       </div>
