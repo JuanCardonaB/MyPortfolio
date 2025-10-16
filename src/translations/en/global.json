@@ -1,15 +1,15 @@
 {
     "Navbar": {
         "Portfolio": "Portfolio",
+        "Welcome": "Welcome",
         "About": "About Me",
         "Experience": "Experience",
-        "Projects": "Projects",
-        "Contact": "Contact"
+        "Projects": "Projects"
     },
-    "Intro": {
-        "Hello": "Hi, I'm",
-        "Name": "Juan Jose",
-        "LastName": "Cardona",
+    "Welcome": {
+        "SoftwareDeveloper&": "Software Developer &",
+        "DataAnalyst": "Data Analyst",
+        "JuanJoseCardonaBolivar": "Juan Jose Cardona Bolivar",
         "Rol": "Full Stack Software Developer"
     },
     "AboutMe": {

@@ -11,13 +11,14 @@ interface NavBarProps {
   aboutRef: React.RefObject<HTMLDivElement>;
   experienceRef: React.RefObject<HTMLDivElement>;
   projectsRef: React.RefObject<HTMLDivElement>;
-  intro: React.RefObject<HTMLDivElement>;
+  welcomeRef: React.RefObject<HTMLDivElement>;
 }
 
 export const NavBar = ({
   aboutRef,
   experienceRef,
   projectsRef,
+  welcomeRef,
 }: NavBarProps) => {
   const { t } = useTranslation("global");
 
@@ -27,7 +28,7 @@ export const NavBar = ({
 
   return (
     <Navbar
-      className={"bg-[#212835]/60 backdrop-blur-3xl pointer-events-none"}
+      className={"bg-[#212835]/40 backdrop-blur-3xl pointer-events-none"}
       shouldHideOnScroll
     >
       <NavbarContent className="pointer-events-auto" justify="start">
@@ -40,6 +41,14 @@ export const NavBar = ({
         className="flex gap-4 pointer-events-auto"
         justify="center"
       >
+        <NavbarItem>
+          <Link
+            className={`cursor-pointer font-semibold text-[#828b9c]`}
+            onPress={() => scrollTo(welcomeRef)}
+          >
+            {t("Navbar.Welcome")}
+          </Link>
+        </NavbarItem>
         <NavbarItem>
           <Link
             className={`cursor-pointer font-semibold text-[#828b9c]`}
