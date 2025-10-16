@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { NavBar } from "../components/NavBar";
 import { Welcome } from "../components/Welcome";
 import { WorkExperience } from "../components/WorkExperience";
+import { Projects } from "../components/Projects";
 
 export const Home = () => {
   const aboutMeRef = useRef<HTMLDivElement>(null);
@@ -24,7 +25,7 @@ export const Home = () => {
           <WorkExperience />
         </div>
         <div ref={projectsRef} id="projects">
-          {/* <Projects /> */}
+          <Projects />
         </div>
         <div ref={aboutMeRef} id="aboutMe">
           {/* <AboutMe /> */}
