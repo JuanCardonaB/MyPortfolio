@@ -50,27 +50,27 @@ export const Welcome = () => {
       </div>
 
       {/* Contenido principal */}
-      <div className="flex justify-center items-center flex-col mt-[-60px] relative z-10">
-        <div className="flex justify-center items-center flex-col">
-          <h1 className="font-bold text-[60px] bg-gradient-to-r from-white via-purple-500 to-white bg-[length:200%_100%] bg-clip-text text-transparent opacity-0 animate-[fadeIn_0.6s_ease-in_forwards,gradient_3s_linear_infinite]">
+      <div className="flex justify-center items-center flex-col mt-[-60px] relative z-10 px-4">
+        <div className="flex justify-center items-center flex-col text-center">
+          <h1 className="font-bold text-[32px] sm:text-[48px] lg:text-[60px] bg-gradient-to-r from-white via-purple-500 to-white bg-[length:200%_100%] bg-clip-text text-transparent opacity-0 animate-[fadeIn_0.6s_ease-in_forwards,gradient_3s_linear_infinite]">
             {t("Welcome.SoftwareDeveloper&")}
           </h1>
-          <h1 className="font-bold text-[60px] bg-gradient-to-r from-white via-purple-500 to-white bg-[length:200%_100%] bg-clip-text text-transparent opacity-0 animate-[fadeIn_0.6s_ease-in_0.3s_forwards,gradient_3s_linear_0.6s_infinite]">
+          <h1 className="font-bold text-[32px] sm:text-[48px] lg:text-[60px] bg-gradient-to-r from-white via-purple-500 to-white bg-[length:200%_100%] bg-clip-text text-transparent opacity-0 animate-[fadeIn_0.6s_ease-in_0.3s_forwards,gradient_3s_linear_0.6s_infinite]">
             {t("Welcome.DataAnalyst")}
           </h1>
         </div>
-        <h3 className="font-semibold text-white text-[20px] mt-2s opacity-0 animate-[fadeIn_0.6s_ease-in_0.6s_forwards]">
+        <h3 className="font-semibold text-white text-[16px] sm:text-[18px] lg:text-[20px] mt-2 sm:mt-2s opacity-0 animate-[fadeIn_0.6s_ease-in_0.6s_forwards]">
           {t("Welcome.JuanJoseCardonaBolivar")}
         </h3>
       </div>
-      <div className="flex justify-center items-center gap-2 mt-8 opacity-0 animate-[fadeIn_0.6s_ease-in_0.9s_forwards] relative z-10">
+      <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-2 mt-6 sm:mt-8 opacity-0 animate-[fadeIn_0.6s_ease-in_0.9s_forwards] relative z-10 px-4">
         <Button
           as="a"
           href="https://linkedin.com/in/juan-jose-cardona-bolivar"
           target="_blank"
           rel="noopener noreferrer"
           variant="bordered"
-          className="font-semibold text-white"
+          className="font-semibold text-white w-full sm:w-auto"
           startContent={
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -98,7 +98,7 @@ export const Welcome = () => {
           target="_blank"
           rel="noopener noreferrer"
           variant="solid"
-          className="font-semibold text-black bg-white"
+          className="font-semibold text-black bg-white w-full sm:w-auto"
           startContent={
             <svg
               xmlns="http://www.w3.org/2000/svg"

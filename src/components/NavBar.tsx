@@ -3,8 +3,12 @@ import {
   Navbar,
   NavbarContent,
   NavbarItem,
+  NavbarMenu,
+  NavbarMenuItem,
+  NavbarMenuToggle,
   Switch,
 } from "@nextui-org/react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 interface NavBarProps {
@@ -21,24 +25,44 @@ export const NavBar = ({
   welcomeRef,
 }: NavBarProps) => {
   const { t } = useTranslation("global");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const scrollTo = (ref: React.RefObject<HTMLDivElement>) => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
+    setIsMenuOpen(false);
   };
+
+  const menuItems = [
+    { label: t("Navbar.Welcome"), ref: welcomeRef },
+    { label: t("Navbar.About"), ref: aboutRef },
+    { label: t("Navbar.Experience"), ref: experienceRef },
+    { label: t("Navbar.Projects"), ref: projectsRef },
+  ];
 
   return (
     <Navbar
       className={"bg-[#212835]/40 backdrop-blur-3xl pointer-events-none"}
       shouldHideOnScroll
+      isMenuOpen={isMenuOpen}
+      onMenuOpenChange={setIsMenuOpen}
     >
-      <NavbarContent className="pointer-events-auto" justify="start">
-        <p className="cursor-pointer font-semibold text-[#828b9c]`">
-          {t("Navbar.Portfolio")}
-        </p>
+      {/* Mobile Logo */}
+      <NavbarContent className="sm:hidden pointer-events-auto" justify="start">
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          className="text-white"
+        />
       </NavbarContent>
 
       <NavbarContent
-        className="flex gap-4 pointer-events-auto"
+        className="hidden sm:flex pointer-events-auto"
+        justify="start"
+      >
+        {/* Space to balance */}
+      </NavbarContent>
+
+      <NavbarContent
+        className="hidden sm:flex gap-4 pointer-events-auto"
         justify="center"
       >
         <NavbarItem>
@@ -57,11 +81,10 @@ export const NavBar = ({
             {t("Navbar.About")}
           </Link>
         </NavbarItem>
-        <NavbarItem isActive>
+        <NavbarItem>
           <Link
             className={`cursor-pointer font-semibold text-[#828b9c]`}
             onPress={() => scrollTo(experienceRef)}
-            aria-current="page"
           >
             {t("Navbar.Experience")}
           </Link>
@@ -81,6 +104,21 @@ export const NavBar = ({
           <Switch color="secondary" />
         </NavbarItem>
       </NavbarContent>
+
+      {/* Mobile Menu */}
+      <NavbarMenu className="bg-[#212835]/95 backdrop-blur-3xl pt-6">
+        {menuItems.map((item, index) => (
+          <NavbarMenuItem key={`${item.label}-${index}`}>
+            <Link
+              className="w-full cursor-pointer font-semibold text-[#828b9c] text-lg"
+              onPress={() => scrollTo(item.ref)}
+              size="lg"
+            >
+              {item.label}
+            </Link>
+          </NavbarMenuItem>
+        ))}
+      </NavbarMenu>
     </Navbar>
   );
 };
