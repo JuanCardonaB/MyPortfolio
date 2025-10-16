@@ -73,7 +73,7 @@ export const WorkExperience = () => {
                   <p className="text-xs sm:text-sm text-[#596170] mb-3">
                     {exp.period}
                   </p>
-                  <p className="text-xs sm:text-large text-gray-300 leading-relaxed mb-3">
+                  <p className="text-xs sm:text-lg text-gray-300 leading-relaxed mb-3">
                     {exp.description}
                   </p>
 
