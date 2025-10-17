@@ -15,11 +15,11 @@ import i18n from "i18next";
 import global_en from "./translations/en/global.json";
 import global_es from "./translations/es/global.json";
 
-const lang = localStorage.getItem("lang") || "en";
+const savedLanguage = localStorage.getItem("language") || "es";
 
 i18n.init({
   interpolation: { escapeValue: false },
-  lng: lang,
+  lng: savedLanguage,
   resources: {
     en: {
       global: global_en,
