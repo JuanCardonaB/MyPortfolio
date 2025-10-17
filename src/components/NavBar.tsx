@@ -24,12 +24,21 @@ export const NavBar = ({
   projectsRef,
   welcomeRef,
 }: NavBarProps) => {
-  const { t } = useTranslation("global");
+  const { t, i18n } = useTranslation("global");
+  console.log(i18n.language);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isEnglish, setIsEnglish] = useState(i18n.language === "en");
 
   const scrollTo = (ref: React.RefObject<HTMLDivElement>) => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
     setIsMenuOpen(false);
+  };
+
+  const handleLanguageChange = (checked: boolean) => {
+    const newLanguage = checked ? "en" : "es";
+    setIsEnglish(checked);
+    i18n.changeLanguage(newLanguage);
+    localStorage.setItem("language", newLanguage);
   };
 
   const menuItems = [
@@ -100,8 +109,16 @@ export const NavBar = ({
       </NavbarContent>
 
       <NavbarContent className="pointer-events-auto" justify="end">
-        <NavbarItem>
-          <Switch color="secondary" />
+        <NavbarItem className="flex items-center gap-2">
+          <span className="text-[#828b9c] text-sm font-medium">ES</span>
+          <Switch
+            isSelected={isEnglish}
+            onValueChange={handleLanguageChange}
+            color="secondary"
+            size="sm"
+            aria-label="Language toggle"
+          />
+          <span className="text-[#828b9c] text-sm font-medium">EN</span>
         </NavbarItem>
       </NavbarContent>
 

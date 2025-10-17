@@ -1,29 +1,46 @@
 {
     "Navbar": {
-        "Home": "Inicio",
+        "Welcome": "Inicio",
         "About": "Sobre mi",
         "Experience": "Experiencia",
         "Projects": "Proyectos",
         "Contact": "Contacto"
     },
-    "Intro": {
-        "Hello": "Hola, soy",
-        "Name": "Juan Jose",
-        "LastName": "Cardona",
+    "Welcome": {
+        "SoftwareDeveloper&": "Desarrollador de Software &",
+        "DataAnalyst": "Analista de Datos",
+        "JuanJoseCardonaBolivar": "Juan Jose Cardona Bolivar",
         "Rol": "Desarrollador de Software Full Stack"
     },
     "AboutMe": {
         "title": "Acerca de mí",
-        "description": "Soy un desarrollador apasionado por crear soluciones tecnológicas que impacten positivamente en la vida de las personas. Con más de 5 años de experiencia, me especializo en desarrollo full-stack, arquitecturas escalables y tecnologías emergentes como blockchain e IA.",
-        "philosophy": "Mi filosofía es simple: \"La tecnología debe ser invisible, la experiencia inolvidable\". Cada línea de código que escribo está pensada para resolver problemas reales y crear experiencias excepcionales.",
+        "description": "Soy un desarrollador full-stack apasionado por crear soluciones tecnológicas que generen un impacto real. Desde los 16 años descubrí mi gusto por la programación y, con el tiempo, he adquirido experiencia en el desarrollo de aplicaciones web y móviles utilizando tecnologías como React, React Native, Node.js y Python.",
         "downloadCV": "Descargar CV",
-        "quote": "\"El futuro pertenece a quienes creen en la belleza de sus sueños\" - Eleanor Roosevelt",
-        "signature": "— Desarrollador & Creador Tech",
-        "footer": "© 2024 Portafolio. Diseñado y desarrollado con ❤️ y mucho café."
+        "footer": "© 2025 Portafolio."
     },
     "WorkExperience": {
-        "Work": "Trabajo",
-        "Experience": "Experiencia de"
+        "Work": "Experiencia de",
+        "Experience": "Trabajo",
+        "Experiences": {
+            "FullStackInfera": {
+                "title": "Desarrollador Full Stack",
+                "company": "INFĒRA",
+                "period": "2024 - Presente",
+                "description": "En INFĒRA, he sido responsable de mantener y mejorar la aplicación móvil de la empresa. Migré el proyecto a una versión más reciente de Expo, simplificando la gestión de dependencias y asegurando estabilidad a largo plazo. También identifiqué y resolví errores clave para entregar una aplicación React Native más confiable. En el backend, desarrollé nuevos endpoints PHP para expandir las funcionalidades del sistema y fortalecer la integración con el frontend."
+            },
+            "FrontendBeach": {
+                "title": "Desarrollador Frontend",
+                "company": "Beach Point Med",
+                "period": "2023 - 2024",
+                "description": "Como Desarrollador Front-End en BeachPointMed, mejoré la experiencia del usuario construyendo un sistema de enrutamiento eficiente y optimizando la interfaz para rendimiento y usabilidad. Implementé estilos y componentes reutilizables para mantener un diseño consistente y acelerar el desarrollo. Además, definí una arquitectura modular y escalable, organizando rutas y componentes para facilitar el mantenimiento y crecimiento futuro de la aplicación."
+            },
+            "NoCodeDream": {
+                "title": "Desarrollador No-Code",
+                "company": "Dream Ventures Studio",
+                "period": "2023 - 2023",
+                "description": "Desarrollé más de 20 páginas de aterrizaje de alta conversión usando Bubble.io en solo dos meses. Mi trabajo ayudó a la empresa a lograr un crecimiento temprano rápido y generar confianza del cliente a través de experiencias web visualmente atractivas y orientadas a resultados."
+            }
+        }
     },
     "Projects": {
         "titleProjects": "Proyectos"

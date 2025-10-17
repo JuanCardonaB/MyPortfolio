@@ -31,10 +31,6 @@ export const AboutMe = () => {
               {t("AboutMe.description")}
             </p>
 
-            <p className="text-sm sm:text-base text-gray-400 leading-relaxed italic">
-              {t("AboutMe.philosophy")}
-            </p>
-
             <div className="pt-4">
               <Button
                 onClick={handleDownloadCV}
@@ -60,15 +56,6 @@ export const AboutMe = () => {
                 {t("AboutMe.downloadCV")}
               </Button>
             </div>
-          </div>
-
-          <div className="text-center space-y-4 opacity-0 animate-[fadeIn_0.8s_ease-in_0.6s_forwards]">
-            <blockquote className="text-sm sm:text-base text-gray-400 italic">
-              {t("AboutMe.quote")}
-            </blockquote>
-            <p className="text-sm text-[#596170] font-medium">
-              {t("AboutMe.signature")}
-            </p>
           </div>
 
           <div className="pt-8 opacity-0 animate-[fadeIn_0.8s_ease-in_0.8s_forwards]">

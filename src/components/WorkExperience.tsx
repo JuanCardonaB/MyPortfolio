@@ -13,27 +13,24 @@ export const WorkExperience = () => {
 
   const experiences: Experience[] = [
     {
-      title: "Full Stack Developer",
-      company: "INFĒRA",
-      period: "2024 - Presente",
-      description:
-        "At INFĒRA, I’ve been responsible for maintaining and improving the company’s mobile application. I migrated the project to a newer version of Expo, simplifying dependency management and ensuring long-term stability. I also identified and resolved key bugs to deliver a more reliable React Native app. On the backend, I developed new PHP endpoints to expand the system’s features and strengthen integration with the frontend.",
+      title: t("WorkExperience.Experiences.FullStackInfera.title"),
+      company: t("WorkExperience.Experiences.FullStackInfera.company"),
+      period: t("WorkExperience.Experiences.FullStackInfera.period"),
+      description: t("WorkExperience.Experiences.FullStackInfera.description"),
       technologies: ["React Native", "PHP", "MySQL", "Expo"],
     },
     {
-      title: "Frontend Developer",
-      company: "Beach Point Med",
-      period: "2023 - 2024",
-      description:
-        "As a Front-End Developer at BeachPointMed, I enhanced the user experience by building an efficient routing system and optimizing the interface for performance and usability. I implemented reusable styles and components to maintain a consistent design and accelerate development. Additionally, I defined a modular and scalable architecture, organizing routes and components for easier maintenance and future growth of the application.",
-      technologies: ["React", "Typescript", "CSS3", "Figma", "Tailwind CSS"],
+      title: t("WorkExperience.Experiences.FrontendBeach.title"),
+      company: t("WorkExperience.Experiences.FrontendBeach.company"),
+      period: t("WorkExperience.Experiences.FrontendBeach.period"),
+      description: t("WorkExperience.Experiences.FrontendBeach.description"),
+      technologies: ["React", "TypeScript", "CSS3", "Figma", "Tailwind CSS"],
     },
     {
-      title: "No-Code Developer",
-      company: "Dream Ventures Studio",
-      period: "2023 - 2023",
-      description:
-        "I developed over 20 high-converting landing pages using Bubble.io within just two months. My work helped the company achieve rapid early growth and build client trust through visually appealing and results-driven web experiences.",
+      title: t("WorkExperience.Experiences.NoCodeDream.title"),
+      company: t("WorkExperience.Experiences.NoCodeDream.company"),
+      period: t("WorkExperience.Experiences.NoCodeDream.period"),
+      description: t("WorkExperience.Experiences.NoCodeDream.description"),
       technologies: ["Bubble.io"],
     },
   ];
@@ -73,7 +70,7 @@ export const WorkExperience = () => {
                   <p className="text-xs sm:text-sm text-[#596170] mb-3">
                     {exp.period}
                   </p>
-                  <p className="text-xs sm:text-lg text-gray-300 leading-relaxed mb-3">
+                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed mb-3">
                     {exp.description}
                   </p>
 
